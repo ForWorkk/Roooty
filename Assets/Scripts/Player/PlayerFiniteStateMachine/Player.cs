@@ -67,6 +67,8 @@ public class Player : MonoBehaviour
         Anim = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
 
+        GetComponent<PlayerCombatHandler>().SetData(playerData, this);
+
         StateMachine.Initialize(IdleState);
     }
 

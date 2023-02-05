@@ -6,7 +6,9 @@ public class SoundManager : MonoBehaviour
 {
     public enum Sound
     {
-
+        PlayerHit,
+        BossHit,
+        Win
     }
 
     private static GameObject oneShotGameObject;

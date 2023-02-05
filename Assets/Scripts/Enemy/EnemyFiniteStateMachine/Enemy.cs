@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
 
     public EnemyStateMachine StateMachine { get; private set; }
 
+    public EnemyIdleState IdleState { get; private set; }
+
     #endregion
 
     #region Components
@@ -30,23 +32,30 @@ public class Enemy : MonoBehaviour
     private Vector2 workSpace;
 
     [SerializeField]
-    private EnemyData enemyData;
+    public EnemyData enemyData;
 
     #endregion
 
     #region Unity Callback Functions
 
-    private void Awake()
+    protected virtual void Awake()
     {
         StateMachine = new EnemyStateMachine();
+
+        IdleState = new EnemyIdleState(this, StateMachine, enemyData, "idle");
 
 
         groundCheck = transform.Find("GroundCheck");
     }
 
-    private void Start()
+    protected virtual void Start()
     {
+        StateMachine.Initialise(IdleState);
+
         RB = GetComponent<Rigidbody2D>();
+        GetComponent<EnemyCombatHandler>().Initialise(enemyData);
+
+        FacingDirection = 1;
     }
 
     private void Update()

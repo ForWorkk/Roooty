@@ -10,6 +10,14 @@ public class EnemyData : ScriptableObject
 
     public float MaxHealth => maxHealth;
 
+    [Header("Boss Data")]
+    [SerializeField] private float chargeSpeed;
+    [SerializeField] private float walkInSpeed;
+
+    public float ChargeSpeed => chargeSpeed;
+    public float WalkInSpeed => walkInSpeed;
+
+
     [Header("Check Variables")]
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private Vector2 groundCheckBox;

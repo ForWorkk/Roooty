@@ -27,6 +27,11 @@ public class EnemyCombatHandler : MonoBehaviour
         }
     }
 
+    public float GetHealthPercentage()
+    {
+        return CurrentHealth / enemyData.MaxHealth;
+    }
+
     private void Death()
     {
         Debug.Log("Death");

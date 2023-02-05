@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66d4eca53743ab409a281b85bcbce1e, type: 3}
+  m_Name: BossBeetleData
+  m_EditorClassIdentifier: 
+  maxHealth: 200
+  chargeSpeed: 40
+  walkInSpeed: 3
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  groundCheckBox: {x: 0.7, y: 0.05}

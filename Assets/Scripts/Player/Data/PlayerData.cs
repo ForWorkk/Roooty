@@ -5,6 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Data")]
 public class PlayerData : ScriptableObject
 {
+    [Header("Combat Data")]
+    [SerializeField] private float maxHealth;
+    [SerializeField] private float maxInvulnerabilityTime;
+
+    public float MaxInvulnerabilityTime => maxInvulnerabilityTime;
+    public float MaxHealth => maxHealth;
+
+
     [Header("Move State")]
     [SerializeField] private float moveSpeed;
 
