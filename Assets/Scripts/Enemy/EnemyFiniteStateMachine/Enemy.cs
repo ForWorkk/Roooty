@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     #region Components
 
     public Rigidbody2D RB { get; private set; }
+    public Animator Anim { get; private set; }
 
     #endregion
 
@@ -50,10 +51,11 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Start()
     {
-        StateMachine.Initialise(IdleState);
-
         RB = GetComponent<Rigidbody2D>();
+        Anim = GetComponent<Animator>();
         GetComponent<EnemyCombatHandler>().Initialise(enemyData);
+
+        StateMachine.Initialise(IdleState);
 
         FacingDirection = 1;
     }

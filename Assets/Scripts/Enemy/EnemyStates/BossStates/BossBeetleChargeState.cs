@@ -32,6 +32,8 @@ public class BossBeetleChargeState : EnemyState
     {
         base.Enter();
 
+        SoundManager.PlaySound(SoundManager.Sound.BossCharge);
+
         maxChargeTime = Random.Range(2f, 4f);
 
         boss = enemy.GetComponent<BossBeetle>();

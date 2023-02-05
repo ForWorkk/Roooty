@@ -22,11 +22,14 @@ public class PlayerInAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        player.SetGravityScale(1);
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        player.SetGravityScale(1);
     }
 
     public override void LogicUpdate()
@@ -45,6 +48,11 @@ public class PlayerInAirState : PlayerState
         if (isGrounded && player.CurrentVelocity.y < 0.0000001f)
         {
             stateMachine.ChangeState(player.IdleState);
+        }
+
+        if (player.CurrentVelocity.y < 3f)
+        {
+            player.SetGravityScale(3);
         }
     }
 

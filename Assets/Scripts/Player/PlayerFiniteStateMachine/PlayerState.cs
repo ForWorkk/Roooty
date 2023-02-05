@@ -23,11 +23,13 @@ public class PlayerState
     public virtual void Enter()
     {
         DoChecks();
+
+        player.Anim.SetBool(animBoolName, true);
     }
 
     public virtual void Exit()
     {
-        
+        player.Anim.SetBool(animBoolName, false);
     }
 
     public virtual void LogicUpdate()

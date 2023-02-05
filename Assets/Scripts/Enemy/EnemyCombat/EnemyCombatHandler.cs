@@ -21,6 +21,8 @@ public class EnemyCombatHandler : MonoBehaviour
     {
         CurrentHealth -= damage;
 
+        SoundManager.PlaySound(SoundManager.Sound.BossHit);
+
         if (CurrentHealth <= 0)
         {
             Death();
@@ -34,6 +36,7 @@ public class EnemyCombatHandler : MonoBehaviour
 
     private void Death()
     {
-        Debug.Log("Death");
+        Destroy(gameObject);
+        GameOver.Instance.GameWon();
     }
 }

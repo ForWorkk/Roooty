@@ -18,6 +18,8 @@ public class GameAssets : MonoBehaviour
 
     public List<SoundAudioClip> soundAudioClips;
 
+    public List<AudioClip> musicList;
+
     [System.Serializable]
     public class SoundAudioClip
     {

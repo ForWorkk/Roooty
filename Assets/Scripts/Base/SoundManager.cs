@@ -8,7 +8,8 @@ public class SoundManager : MonoBehaviour
     {
         PlayerHit,
         BossHit,
-        Win
+        Win,
+        BossCharge
     }
 
     private static GameObject oneShotGameObject;

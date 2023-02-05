@@ -48,10 +48,12 @@ public class PlayerCombatHandler : MonoBehaviour
     {
         if (!isInvulnerable)
         {
+            SoundManager.PlaySound(SoundManager.Sound.PlayerHit);
+
             CurrentHealth -= damage;
 
-            player.SetVelocityX(dir * 3);
-            player.SetVelocityY(3);
+            player.SetVelocityX(dir * 9);
+            player.SetVelocityY(6);
 
             if (CurrentHealth <= 0)
             {
@@ -69,6 +71,7 @@ public class PlayerCombatHandler : MonoBehaviour
 
     private void Death()
     {
-        Debug.Log("Player Death");
+        Destroy(gameObject);
+        GameOver.Instance.GameLost();
     }
 }

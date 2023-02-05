@@ -101,6 +101,11 @@ public class Player : MonoBehaviour
         CurrentVelocity = workSpace;
     }
 
+    public void SetGravityScale(float value)
+    {
+        RB.gravityScale = value;
+    }
+
     #endregion
 
     #region Check Functions

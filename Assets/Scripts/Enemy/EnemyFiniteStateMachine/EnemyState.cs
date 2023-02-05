@@ -23,11 +23,13 @@ public class EnemyState
     public virtual void Enter()
     {
         DoChecks();
+
+        enemy.Anim.SetBool(animBoolName, true);
     }
 
     public virtual void Exit()
     {
-
+        enemy.Anim.SetBool(animBoolName, false);
     }
 
     public virtual void LogicUpdate()

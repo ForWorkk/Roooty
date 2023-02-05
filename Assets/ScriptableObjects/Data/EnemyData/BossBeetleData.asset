@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66d4eca53743ab409a281b85bcbce1e, type: 3}
   m_Name: BossBeetleData
   m_EditorClassIdentifier: 
-  maxHealth: 200
-  chargeSpeed: 40
+  maxHealth: 1000
+  chargeSpeed: 35
   walkInSpeed: 3
   whatIsGround:
     serializedVersion: 2

@@ -7,7 +7,8 @@ public class Loader : MonoBehaviour
 {
     public enum Scene
     {
-        GameScene
+        DanceScene,
+        LoopScene
     }
 
     public static void Load(Scene scene)
